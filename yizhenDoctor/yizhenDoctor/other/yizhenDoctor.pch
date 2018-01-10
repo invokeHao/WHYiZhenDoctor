@@ -1,0 +1,88 @@
+//
+//  yizhenDoctor.pch
+//  yizhenDoctor
+//
+//  Created by augbase on 16/8/25.
+//  Copyright © 2016年 augbase. All rights reserved.
+//
+
+#ifndef yizhenDoctor_pch
+#define yizhenDoctor_pch
+
+//.h文件引入
+#import <AFNetworking.h>
+//#import <Bugtags/Bugtags.h>
+#import "EMSDK.h"
+#import "MJRefresh.h"
+#import <QuartzCore/QuartzCore.h>
+#import "Masonry.h"
+#import <POP/POP.h>
+#import <ADTransitionController.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "UIView+Extension.h"
+
+
+//加入自定义的support类
+#import "HttpManager.h"
+#import "SetupView.h"
+#import "NSDate+Extension.h"
+#import "RealReachability.h"
+#import "Reachability.h"
+//环信账号
+#define EMClientAppId @"abdev#yizhendoctor"
+#define EMClientPushCer @"yizhenDocPushcer"
+
+//自定义字符串
+#define  ViewHeight [[UIScreen mainScreen] bounds].size.height
+#define  ViewWidth [[UIScreen mainScreen] bounds].size.width
+#define  NotFirstLogin @"NotFirstTime"
+
+#ifdef DEBUG
+# define YiZhenLog(format,...) NSLog((@"[函数名:%s]" "[行号:%d]" format), __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define YiZhenLog(...);
+#endif
+
+#warning 别忘了如果用不到环信，就把包给删掉
+
+//#define Baseurl @"http://api.augbase.com/yiserver/"
+#define Baseurl @"http://121.43.151.177/yiserver/"
+#define yizhenAPPVersion @"2.4.6"
+
+
+
+//post放重复提交加入的随机数
+#define SuiJiShu [NSString stringWithFormat:@"%.6d", (arc4random() % 1000000)]
+
+//因为需求改动所以都大了一号
+#define YiZhenFont [UIFont fontWithName:@"PingFangSC-Light" size:16.0]
+#define YiZhenFont14 [UIFont fontWithName:@"PingFangSC-Light" size:15.0]
+#define YiZhenFont13 [UIFont fontWithName:@"PingFangSC-Light" size:14.0]
+#define YiZhenFont16 [UIFont fontWithName:@"PingFangSC-Light" size:17.0]
+#define YiZhenFont12 [UIFont fontWithName:@"PingFangSC-Light" size:13.0]
+#define YiZhenFont17 [UIFont fontWithName:@"PingFangSC-Light" size:18.0]
+
+//主题颜色，主要是各种背景色
+#define themeColor [UIColor colorWithRed:41.0/255.0 green:181.0/255.0 blue:207.0/255.0 alpha:1.0]
+//灰色，主要用于淡色背景
+#define grayBackgroundLightColor [UIColor colorWithRed:248.0/255.0 green:248.0/255.0 blue:248.0/255.0 alpha:1.0]
+//灰色，主要用于稍深背景
+#define grayBackgroundDarkColor [UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1.0]
+//灰色，主要用于各种按钮不能点击时候的背景色
+#define grayBackColor [UIColor colorWithRed:220.0/255.0 green:220.0/255.0 blue:220.0/255.0 alpha:1.0]
+#define lightGrayBackColor [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]
+//灰色，主要用于各种label不能点击时候的背景色
+#define grayLabelColor [UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1.0]
+//新的版本灰
+#define grayNewlabelColor [UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:1.0]
+//黑色，用于显示标题的黑色
+#define blackTitleColor [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0]
+//黑色，用于显示标题的黄色
+#define yellowTitleColor [UIColor colorWithRed:255.0/255.0 green:203.0/255.0 blue:5.0/255.0 alpha:1.0]
+//浅灰色，用于浅色字
+#define darkTitleColor [UIColor colorWithRed:180.0/255.0 green:180.0/255.0 blue:180.0/255.0 alpha:1.0]
+//白色，主要用于自定义的
+#define navigationColor [UIColor whiteColor]//navigationbar的背景色
+
+#endif /* yizhenDoctor_pch */

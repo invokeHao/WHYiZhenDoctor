@@ -1,0 +1,21 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, "8.0"
+
+target :'yizhenDoctor'  do
+
+pod 'pop'
+pod 'ADTransitionController'
+pod 'Masonry'
+pod 'AFNetworking','~> 2.5.0'
+pod 'MBProgressHUD'
+pod 'FMDB'
+pod 'SDWebImage'
+
+pod 'ChameleonFramework'
+pod 'Haneke', '~> 1.0'
+pod 'SVProgressHUD'
+#pod 'Bugtags'
+pod 'HyphenateFullSDK'
+
+end
